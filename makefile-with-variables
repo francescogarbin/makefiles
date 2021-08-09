@@ -1,0 +1,32 @@
+CC=gcc
+CFLAGS=-Wall -I./src/
+DEPS=count_args.h list_args.h
+SRC_DIR=./src/
+OBJ_DIR=./obj/
+BIN_DIR=./bin/
+
+all: setup_dirs compile
+
+setup_dirs:
+	mkdir -p ./obj
+	mkdir -p ./bin
+
+compile: list_args.o count_args.o main.o
+	gcc $(CFLAGS) $(OBJ_DIR)list_args.o $(OBJ_DIR)count_args.o $(OBJ_DIR)main.o -o $(BIN_DIR)args-echo
+
+count_args.o: $(SRC_DIR)count_args.c
+	gcc $(CFLAGS) -c $(SRC_DIR)count_args.c -o $(OBJ_DIR)count_args.o
+
+list_args.o: $(SRC_DIR)list_args.c
+	gcc $(CFLAGS) -c $(SRC_DIR)list_args.c -o $(OBJ_DIR)list_args.o
+
+main.o: $(SRC_DIR)main.c
+	gcc -$(CFLAGS) -c $(SRC_DIR)main.c -o $(OBJ_DIR)main.o
+
+main.o: $(SRC_DIR)main.c
+	gcc $(CFLAGS) -c $(SRC_DIR)main.c -o $(OBJ_DIR)main.o
+
+clean:
+	rm -rf ./bin
+	rm -rf ./obj
+

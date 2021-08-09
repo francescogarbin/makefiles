@@ -1,0 +1,22 @@
+all: setup compile
+
+setup:
+	mkdir -p ./obj
+	mkdir -p ./bin
+
+compile: count_args.o list_args.o main.o
+	gcc -Wall ./obj/main.o ./obj/count_args.o ./obj/list_args.o -o ./bin/args-echo
+
+count_args.o: ./src/count_args.c
+	gcc -Wall -c ./src/count_args.c -o ./obj/count_args.o
+
+list_args.o: ./src/list_args.c
+	gcc -Wall -c ./src/list_args.c -o ./obj/list_args.o
+
+main.o: ./src/main.c
+	gcc -Wall -c ./src/main.c -o ./obj/main.o
+
+clean:
+	rm -rf ./obj
+	rm -rf ./bin
+
