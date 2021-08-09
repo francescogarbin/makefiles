@@ -5,7 +5,7 @@
 #include "count_args.h"
 
 /**
- * Counts items contained in argv
+ * Counts items contained in argv.
  */
 int count_args(char** argv) {
     int count = 0;
