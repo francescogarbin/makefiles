@@ -11,7 +11,9 @@ I have set this repo up to remind me and my team how to start writing one in a s
 Plain, simple makefiles that serve as a foundation to firestart new projects. With time and as projects grow, we accept complexity to increase, but I want to start plain and simple. I want projects to start intelligible in every aspect, even in obscure makefiles.
 
 ## What are these makefile doing?
-They build the app contained in the <pre>src</pre> folder. The makefiles compile and build a silly command line app, <code>args-echo</code>, that dumps its entered arguments on the command line. While the output ain't fancy, it has been clearly over-engineered to increase the scope of the makefile.
+They build the app contained in the <code>src</code> folder: a simple command line app, named <code>args-echo</code>, that dumps its entered arguments on the command line.
+
+While the output ain't fancy and it's mission predictable, the code in src has been clearly over-engineered for such a simple task with the clear objective to increase the use cases for using make and the makefiles listed in this repo. Such a siple app is, in fact, built out of 3 (!) C files and two headers.
 
 A <code>main()</code> function in main.c calls two functions sparsed in two distinct .c files: <code>count_args.c</code> and <code>list_args.c</code>.
 
@@ -32,6 +34,10 @@ Clone this repo, enter the root folder and run:
 or
 
 <code>make -f makefile-with-variables</code>
+
+To clean the local build environment and start over, type the usual clean target, therefore:
+
+<code>make -f <makefile name here> clean</code>
 
 The commands above build the same identical binary. The do it with different strategies but the results are identical. This is a learning path: start looking at <code>makefile-explicit</code>, it's crystal clear how it build its targets. Then open <code>makefile-with-variables</code> and compare it with the previous one. It should give you the sense of a much concise sintax. Variables in makefiles turn out very useful in mid-size projects, use them wisely but use them.
 
