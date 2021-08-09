@@ -1,7 +1,10 @@
-# Makefiles
-Makefiles are such a handy tool and, yet, sintax is kinda tricky and does not stick to your bones if you don't practice the art of writing them on a regular basis.
+![bold_initiative_gnu_head](https://user-images.githubusercontent.com/571018/128744661-f4918019-b69f-4adc-859e-9d31aadac62a.png)
 
-As an engineering manager, of course I do not. Yet, as a (very) hands-on engineering manager, I write code from now and then and, above all, I mentor young fellows that happen to work in my teams. Writing a clean, decent and intelligible makefile in shared development environments is a must.
+
+# Makefiles
+Makefiles are such a handy tool and, yet, their sintax is kinda tricky and does not stick to your bones if you don't practice the art of writing them on a regular basis.
+
+As an engineering manager, of course I do not. Yet, as a (very) hands-on engineering manager, I write code and, above all, I happily mentor young fellows that happen to work in my teams. Writing a clean, decent and intelligible makefile in shared development environments is a must.
 
 I have set this repo up to remind me and my team how to start writing one in a style that has the goal of making makefile as explicit as possible. No dark arts, here, no [read the fucking manual](https://en.wikipedia.org/wiki/RTFM) to grasp some weird constructs.
 
